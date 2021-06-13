@@ -21,8 +21,10 @@ body {
 }
 
 .slide {
+	filter: blur(2px);
 	height: 80vh;
 	border-radius: 20px;
+	border: 2px solid rgba(0,0,0,.5);
 	margin: 10px;
 	cursor: pointer;
 	flex: 1;
@@ -33,7 +35,29 @@ body {
 	transition: all .5s ease-in-out;
 }
 
+.slide--water {
+	box-shadow: 0 0 15px #0261E1;
+}
+
+.slide--fire {
+	box-shadow: 0 0 15px #FF992B;
+}
+
+.slide--wood {
+	box-shadow: 0 0 15px #765B54;
+}
+
+.slide--metal {
+	box-shadow: 0 0 15px #121212;
+}
+
+.slide--land {
+	box-shadow: 0 0 15px #7A5739;
+}
+
+
 .slide.active {
+	filter: blur(0);
 	flex: 10;
 }
 
