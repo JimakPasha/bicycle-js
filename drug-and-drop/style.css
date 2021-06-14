@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+	background: linear-gradient(317deg, rgba(255,255,255,1) 0%, rgba(170,170,170,1) 100%);
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header,
+.item {
+	width: 120px;
+	height: 50px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 4px 6px 6px rgba(255,255,255,.3);
+}
+
+.start {
+	background: radial-gradient(circle, rgba(224,224,224,1) 0%, rgba(255,0,254,1) 100%);
+}
+
+.progress {
+	background: radial-gradient(circle, rgba(224,224,224,1) 0%, rgba(249,255,0,1) 100%);
+}
+
+.done {
+  background: radial-gradient(circle, rgba(241,241,233,1) 0%, rgba(0,255,51,1) 100%);
+}
+
+.item {
+	text-align: center;
+	padding: 14px;
+	background-color: #fff;
+	height: 200px;
+	cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+	width: 120px;
+	height: 200px;
+}
+
+.hold {
+	background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(61,61,61,1) 100%);
+}
+
+.hidden {
+	display: none;
+}
+
+.hovered {
+	background: linear-gradient(19deg, rgba(255,255,255,1) 0%, rgba(255,255,189,0.6895133053221288) 100%);
+	border-radius: 20px;
+}
