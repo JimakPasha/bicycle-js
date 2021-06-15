@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+	<link rel="stylesheet" href="style.css">
+	<title>slider-fullscreen</title>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="sidebar">
+			<div class="sidebar__item" style="background: linear-gradient(270deg, rgba(104,138,0,1) 0%, rgba(255,255,255,1) 100%);">
+				<h3 class="sidebar__title">
+					Green
+				</h3>
+			</div>
+			<div class="sidebar__item" style="background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(167,180,212,1) 100%);">
+				<h3 class="sidebar__title">
+					White
+				</h3>
+			</div>
+			<div class="sidebar__item" style="background: linear-gradient(270deg, rgba(198,131,80,1) 0%, rgba(255,255,255,1) 100%);">
+				<h3 class="sidebar__title">
+					Orange
+				</h3>
+			</div>
+			<div class="sidebar__item" style="background: linear-gradient(270deg, rgba(115,184,251,1) 0%, rgba(255,255,255,1) 100%);">
+				<h3 class="sidebar__title">
+					Blue
+				</h3>
+			</div>
+			<div class="sidebar__item" style="background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);">
+				<h3 class="sidebar__title">
+					Black
+				</h3>
+			</div>
+		</div>
+
+		<div class="slider">
+			<div class="slider__item" style="background-image: url(images/black.jpg);"></div>
+			<div class="slider__item" style="background-image: url(images/blue.jpg);"></div>
+			<div class="slider__item" style="background-image: url(images/orange.jpg);"></div>
+			<div class="slider__item" style="background-image: url(images/white.jpg);"></div>
+			<div class="slider__item" style="background-image: url(images/green.jpg);"></div>
+		</div>
+
+		<div class="controls">
+			<button class="controls__btn controls__btn-down">
+				<i class="fas fa-arrow-down"></i>
+			</button>
+			<button class="controls__btn controls__btn-up">
+				<i class="fas fa-arrow-up"></i>
+			</button>
+		</div>
+
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
