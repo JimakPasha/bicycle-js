@@ -29,8 +29,8 @@
 		</h3>
 		<ul class="time__list">
 			<li class="time__item">
-				<button class="time__btn btn" data-time="10">
-					10 секунд
+				<button class="time__btn btn" data-time="1">
+					1 секунд
 				</button>
 			</li>
 			<li class="time__item">
@@ -53,8 +53,20 @@
 			</h3>
 			<h3 class="game__score-title">Счёт: <span class="game__score-title-num">0</span></h3>
 		</div>
-		<div class="game__board" id="board"></div>
+		<div class="game__board" id="board">
+			<div class="score">
+				<h3 class="score__title">
+					Счёт: <span class="score__title-num"></span>
+				</h3>
+				<button class="score__btn btn" id="repeat">
+					Сыграть ещё
+				</button>
+			</div>
+		</div>
 	</div>
+
+	<audio id="audio-shot" src="assets/audio/shot.mp3"></audio>
+	<audio id="audio-btn" src="assets/audio/btn-click.mp3"></audio>
 
 
 
