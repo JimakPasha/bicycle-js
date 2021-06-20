@@ -1,18 +1,22 @@
 'use strict';
 
 const startBtn = document.querySelector('#start'),
+	btns = document.querySelectorAll('.btn'),
 	screens = document.querySelectorAll('.screen'),
 	timeList = document.querySelector('.time__list'),
 	dashboard = document.querySelector('.game__dashboard'),
 	timer = document.querySelector('.game__timer-title-num'),
+	scoreNum = document.querySelector('.score__title-num'),
 	scoreDashboard = document.querySelector('.game__score-title-num'),
+	scoreWrapper = document.querySelector('.score'),
 	board = document.querySelector('#board'),
-	colors = ['#F0A49F', '#DE362E', '#B0231C', '#F4E84F', '#F0DF0F', '#39E11E', '#269313', '#0FF0DA', '#0D0DF2', '#9292FA', '#D52BBE', '#751769', '#FFFFFF'];
+	colors = ['#F0A49F', '#DE362E', '#B0231C', '#F4E84F', '#F0DF0F', '#39E11E', '#269313', '#0FF0DA', '#0D0DF2', '#9292FA', '#D52BBE', '#751769', '#FFFFFF'],
+	audioShot = document.querySelector('#audio-shot'),
+	audioBtn = document.querySelector('#audio-btn');
 
 let time = 0;
 let score = 0;
 let idInterval;
-
 
 startBtn.addEventListener('click', () => {
 	screens[0].classList.add('up');
@@ -32,7 +36,16 @@ board.addEventListener('click', (e) => {
 		score++;
 		e.target.remove();
 		createRandomCircle();
+		audioShot.currentTime = 0;
+		audioShot.play();
 	}
+});
+
+btns.forEach((item) => {
+	item.addEventListener('click', () => {
+		audioBtn.currentTime = 0;
+		audioBtn.play();
+	});
 });
 
 function startGame() {
@@ -90,17 +103,10 @@ function setColor(element) {
 }
 
 function finishGame() {
+	board.querySelector('.circle').remove();
 	dashboard.classList.add('hide');
-	board.innerHTML = `
-	<div class="score">
-		<h3 class="score__title">
-			Счёт: <span class="score__title-num">${score}</span>
-		</h3>
-		<button class="score__btn" id="repeat">
-			Сыграть ещё
-		</button>
-	</div>
-	`;
+	scoreWrapper.style.display = 'flex';
+	scoreNum.innerHTML = `${score}`;
 	clearInterval(idInterval);
 	const repeatBtn = document.querySelector('#repeat');
 	repeatBtn.addEventListener('click', () => {
@@ -111,9 +117,8 @@ function finishGame() {
 		});
 		screens[0].classList.add('up');
 		dashboard.classList.remove('hide');
-		board.innerHTML = '';
+		scoreWrapper.style.display = 'none';
 		score = 0;
 		scoreDashboard.innerHTML = '0';
 	});
-
 }
